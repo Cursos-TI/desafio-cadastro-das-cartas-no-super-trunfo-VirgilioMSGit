@@ -26,6 +26,8 @@ int main() {
     float area1;
     float pib1;
     int pontosTuristicos1;
+    float densidadep1; // entrada nova nivel intermediario
+    float pibc1; // entrada nova nivel intermediario
 
     // Variáveis da Carta 2
     char estado2;
@@ -35,6 +37,8 @@ int main() {
     float area2;
     float pib2;
     int pontosTuristicos2;
+    float densidadep2; // entrada nova nivel intermediario
+    float pibc2; // entrada nova nivel intermediario
 
     // Entrada de dados da Carta 1
     printf("Cadastro da Carta 1:\n");
@@ -59,6 +63,9 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos1);
 
+    densidadep1  = (float) populacao1 / area1; // entrada nova nivel intermediario
+    pibc1 = (float) pib1 / populacao1 *1000000000; // entrada nova nivel intermediario
+
     // Entrada de dados da Carta 2
     printf("\nCadastro da Carta 2:\n");
     printf("Estado (A-H): ");
@@ -82,6 +89,10 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos2);
 
+    densidadep2 = (float) populacao2 / area2; // entrada nova nivel intermediario
+    pibc2 = (float) pib2/ populacao2 *1000000000; // entrada nova nivel intermediario
+    
+
     // Exibição das cartas
     printf("\n--- Carta 1 ---\n");
     printf("Estado: %c\n", estado1);
@@ -91,6 +102,8 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadep1); // entrada nova nivel intermediario
+    printf("PIB per Capta: %.2f reais\n", pibc1); // entrada nova nivel intermediario
 
     printf("\n--- Carta 2 ---\n");
     printf("Estado: %c\n", estado2);
@@ -100,6 +113,8 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadep2); // entrada nova nivel intermediario
+    printf("PIB per Capta: %.2f R$\n", pibc2); // entrada nova nivel intermediario
 
     return 0;
 }
